@@ -7,6 +7,14 @@ authors:
 tags:
   - Second Brain
   - Markdown
+```markmap {height="200px"}
+- Hugo Modules
+  - Hugo Blox
+  - netlify
+  - netlify-cms
+  - slides
+```
+
 image:
   caption: 'Image credit: [**Unsplash**](https://unsplash.com)'
 ---
