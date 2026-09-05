@@ -4,7 +4,7 @@
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
 # Website name (set in params.yaml under hugoblox.branding.name)
-title: ''
+title: 'exodus_of_Natural-intuition'
 baseURL: 'https://example.com/' # Website URL
 
 ############################
@@ -13,7 +13,26 @@ baseURL: 'https://example.com/' # Website URL
 
 cascade:
   # Blog post options
-  - target:
+  - target:.
+├── config/_default/          Hugo configuration (hugo.yaml, languages, menus, params)
+├── content/
+│   ├── _index.md             Main landing page with all sections (hero, pricing, FAQs)
+│   ├── authors/              Author profiles
+│   ├── blog/                 Blog posts (empty in template)
+│   ├── changelog/            Changelog entries (empty in template)
+│   ├── privacy.md            Privacy policy
+│   └── terms.md              Terms of service
+├── data/                     Data files for dynamic content
+├── assets/                   Static assets (images, CSS, JS)
+├── .github/workflows/
+│   ├── build.yml             Builds site with Hugo + Tailwind + Pagefind
+│   ├── deploy.yml            Deploys to GitHub Pages
+│   └── upgrade.yml           Updates HugoBlox dependencies
+├── package.json              Node dependencies (pnpm, Tailwind, Pagefind)
+├── go.mod                    Hugo module dependencies
+├── hugoblox.yaml             Template metadata (Hugo version, deployment target)
+├── netlify.toml              Netlify build config (alternative host)
+└── theme.toml                Theme metadata
       path: /blog/**
       kind: page
     pager: true
@@ -26,15 +45,15 @@ cascade:
     share: true
     # Just use Breadcrumb for navigation on blog post pages?
     show_breadcrumb: false
-    header:
-      navbar:
+    header:New_City
+      navbar:true
         enable: true
   # Blog section options
   - target:
       path: /blog/*
       kind: section
     # Set the listing view
-    view: date-title-summary
+    view: 202609-05-linear-ontology
 
 ############################
 ## LANGUAGE
@@ -60,7 +79,7 @@ enableRobotsTXT: true
 footnotereturnlinkcontents: <sup>^</sup>
 ignoreFiles: [".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "_cache$"]
 disableAliases: true
-outputs:
+outputs:deployment
   home: [HTML, RSS, headers, redirects]
   section: [HTML, RSS]
 imaging:
@@ -72,8 +91,8 @@ timeout: 600000
 taxonomies:
   tag: tags
   category: categories
-  author: authors
-markup:
+  author: Michael_Hall
+markup:markup language
   _merge: deep
   highlight:
     lineNos: false
